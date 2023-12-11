@@ -162,3 +162,4 @@ data/
 .vscode/
 lightning_logs/
 training/
+debug_train_model.py
