@@ -41,21 +41,13 @@ p.add_argument('--dropout', type=float, help='Dropout rate', default=0.1)
 ###### Train a XLM-RoBERTa base model
 
 ```
-python -m ner_baseline.train_model --train train.txt --dev dev.txt --out_dir . --model_name xlmr_ner --gpus 1 --epochs 2 --encoder_model xlm-roberta-base --batch_size 64 --lr 0.0001
-```
-
-```
-python -m train_model --train PATH_TO_TRAIN --dev PATH_TO_DEV --out_dir . --model_name MODEL_NAME --gpus 1 --epochs 50 --encoder_model xlm-roberta-base --batch_size 64 --lr 0.00002
+python -m train_model --train PATH_TO_TRAIN --dev PATH_TO_DEV --out_dir . --iob_tagging IOBTAGGING --model_name MODEL_NAME --gpus 1 --epochs 50 --encoder_model xlm-roberta-base --batch_size 64 --lr 0.00002
 ```
 
 ###### Evaluate the trained model
 
 ```
-python -m ner_baseline.evaluate --test test.txt --out_dir . --gpus 1 --encoder_model xlm-roberta-base --model MODEL_FILE_PATH --prefix xlmr_ner_results
-```
-
-```
-python -m evaluate --test PATH_TO_TEST --out_dir . --gpus 1 --encoder_model xlm-roberta-base --model PATH_TO_MODEL --prefix xlmr_ner_results
+python -m evaluate --test PATH_TO_TEST --out_dir . --iob_tagging IOBTAGGING --gpus 1 --encoder_model xlm-roberta-base --model PATH_TO_MODEL --prefix xlmr_ner_results
 ```
 
 ###### Predicting the tags from a pretrained model
