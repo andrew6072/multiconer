@@ -44,11 +44,18 @@ p.add_argument('--dropout', type=float, help='Dropout rate', default=0.1)
 python -m train_model --train PATH_TO_TRAIN --dev PATH_TO_DEV --out_dir . --iob_tagging IOBTAGGING --model_name MODEL_NAME --gpus 1 --epochs 50 --encoder_model xlm-roberta-base --batch_size 64 --lr 0.00002
 ```
 
+- PATH_TO_TRAIN replace with its own path like: "/path/to/data/multiconer2022/RU-Russian/ru_train.conll"
+- PATH_TO_DEVreplace with its own path like: "/path/to/data/multiconer2022/RU-Russian/ru_dev.conll"
+- MODEL_NAME replace with your model name, like: "xlmr_ner_ru"
+
 ###### Evaluate the trained model
 
 ```
 python -m evaluate --test PATH_TO_TEST --out_dir . --iob_tagging IOBTAGGING --gpus 1 --encoder_model xlm-roberta-base --model PATH_TO_MODEL --prefix xlmr_ner_results
 ```
+
+- PATH_TO_TEST replace with its own path like: "/path/to/data/multiconer2022/RU-Russian/ru_test.conll"
+- PATH_TO_MODEL replace with its own path like: "./xlmr_ner_ru/lightning_logs/version_3538632"
 
 ###### Predicting the tags from a pretrained model
 

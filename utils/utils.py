@@ -25,6 +25,8 @@ msra_iob = {'O': 0, 'S-NS': 1, 'B-NS': 2, 'E-NS': 3, 'B-NT': 4, 'M-NT': 5, 'E-NT
 ontonotes_iob = {'E-PER': 0, 'E-GPE': 1, 'E-LOC': 2, 'M-ORG': 3, 'E-ORG': 4, 'S-ORG': 5, 'B-GPE': 6, 'O': 7, 'M-PER': 8, 'M-LOC': 9, 'B-PER': 10, 'M-GPE': 11, 'S-LOC': 12, 'B-ORG': 13,
                  'S-PER': 14, 'B-LOC': 15, 'S-GPE': 16}
 vimq_iob = {'B-SYMPTOM_AND_DISEASE': 0, 'I-SYMPTOM_AND_DISEASE': 1, 'B-drug': 2, 'I-drug': 3, 'B-medical_procedure': 4, 'I-medical_procedure': 5, 'O': 6}
+rdrs_iob = {'B-Medication':0, 'I-Medication':1, 'B-Disease':2, 'I-Disease':3, 'B-Note':4, 'I-Note':5, 'B-ADR':6, 'I-ADR':7, 'O':8}
+
 
 def parse_args():
     p = argparse.ArgumentParser(description='Model configuration.', add_help=False)
@@ -76,6 +78,8 @@ def get_tagset(tagging_scheme):
         return weibo_iob
     elif 'vimq' in tagging_scheme:
         return vimq_iob
+    elif 'rdrs' in tagging_scheme:
+        return rdrs_iob
 
 
 def get_out_filename(out_dir, model, prefix):
