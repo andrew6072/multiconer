@@ -45,7 +45,7 @@ python -m train_model --train PATH_TO_TRAIN --dev PATH_TO_DEV --out_dir . --iob_
 ```
 
 - PATH_TO_TRAIN replace with its own path like: "/path/to/data/multiconer2022/RU-Russian/ru_train.conll"
-- PATH_TO_DEVreplace with its own path like: "/path/to/data/multiconer2022/RU-Russian/ru_dev.conll"
+- PATH_TO_DEV replace with its own path like: "/path/to/data/multiconer2022/RU-Russian/ru_dev.conll"
 - MODEL_NAME replace with your model name, like: "xlmr_ner_ru"
 
 ###### Evaluate the trained model
