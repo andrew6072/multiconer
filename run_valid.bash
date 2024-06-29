@@ -6,5 +6,5 @@ python evaluate.py --test PATH_TO_TEST \
                 --prefix MODEL_NAME
 
 # PATH_TO_TEST replace with its own path like: "/path/to/data/multiconer2022/RU-Russian/ru_test.conll"
-# PATH_TO_MODEL replace with its own path like: "./xlmr_ner_ru/lightning_logs/version_3538632"
+# PATH_TO_MODEL replace with its own path like: "training/xlmr_ner_ru/lightning_logs/version_3538632"
 # MODEL_NAME replace with your model name, like: "xlmr_ner_ru"
